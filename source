@@ -1,0 +1,29 @@
+local Players = game:GetService("Players")
+
+local Player = Players.LocalPlayer
+local Backpack = Player:WaitForChild("Backpack")
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local RightArm = Character:WaitForChild("Right Arm")
+local Humanoid = Character:WaitForChild("Humanoid")
+
+local TargetPlayer = Players:WaitForChild(Target)
+local TargetCharacter = TargetPlayer.Character or TargetPlayer.CharacterAdded:Wait()
+local RootPart = TargetCharacter:WaitForChild("HumanoidRootPart")
+
+Humanoid.Name = 1
+local HumanoidClone = Humanoid:Clone()
+HumanoidClone.Parent = Character
+HumanoidClone.Name = "Humanoid"
+Humanoid:Destroy()
+local Humanoid = Character:WaitForChild("Humanoid")
+workspace.CurrentCamera.CameraSubject = Character
+Character.Animate.Disabled = true
+Character.Animate.Disabled = false
+Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+local Tool = Backpack:FindFirstChildOfClass("Tool")
+local Handle = Tool:WaitForChild("Handle")
+Humanoid:EquipTool(Tool)
+firetouchinterest(Handle, RootPart, 1)
+wait()
+Humanoid.Health = 0
+Player.Character = nil
