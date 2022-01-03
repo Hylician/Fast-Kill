@@ -3,7 +3,6 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local Backpack = Player:WaitForChild("Backpack")
 local Character = Player.Character or Player.CharacterAdded:Wait()
-local RightArm = Character:WaitForChild("Right Arm")
 local Humanoid = Character:WaitForChild("Humanoid")
 
 local TargetPlayer = Players:WaitForChild(Target)
