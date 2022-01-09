@@ -16,7 +16,6 @@ HumanoidClone.Name = "Humanoid"
 Humanoid:Destroy()
 local Humanoid = Character:WaitForChild("Humanoid")
 workspace.CurrentCamera.CameraSubject = Character
-Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
 local Tool = Backpack:FindFirstChildOfClass("Tool")
 local Handle = Tool:WaitForChild("Handle")
 Humanoid:EquipTool(Tool)
