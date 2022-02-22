@@ -5,7 +5,7 @@ local Backpack = Player:WaitForChild("Backpack")
 local Character = Player.Character or Player.CharacterAdded:Wait()
 local Humanoid = Character:WaitForChild("Humanoid")
 
-local TargetPlayer = Players:WaitForChild(Target)
+local TargetPlayer = Players:WaitForChild(getgenv().Target)
 local TargetCharacter = TargetPlayer.Character or TargetPlayer.CharacterAdded:Wait()
 local RootPart = TargetCharacter:WaitForChild("HumanoidRootPart")
 
